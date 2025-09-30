@@ -85,7 +85,8 @@
       const name = document.getElementById('username').value.trim();
       if (name) {
         localStorage.setItem("chatName", name);
-        window.location.href = "chat.html";
+        // window.location.href = "chat.html";
+         window.location.href = "/chat";
       } else {
         alert("Please enter your name!");
       }

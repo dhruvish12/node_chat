@@ -10,6 +10,10 @@ const io = require('socket.io')(server);
 
 app.use(express.static(path.join(__dirname, 'public'))); 
 
+app.get('/chat', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'chat.html'));
+});
+
 let socketsConnected = new Set();
 
 io.on('connection', onConnected);
