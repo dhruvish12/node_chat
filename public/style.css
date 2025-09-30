@@ -213,7 +213,14 @@ body {
    Responsive Design
 --------------------*/
 
-/* Tablet */
+/* Small laptops & large tablets */
+@media (max-width: 1024px) {
+  .main {
+    width: 95%;
+  }
+}
+
+/* Tablets */
 @media (max-width: 768px) {
   .main {
     width: 100%;
@@ -244,15 +251,15 @@ body {
   }
 }
 
-/* Mobile */
-@media (max-width: 480px) {
+/* Large phones */
+@media (max-width: 600px) {
   .main {
-    border-width: 4px;
-    border-radius: 16px;
+    border-width: 5px;
+    border-radius: 18px;
   }
 
   .name {
-    font-size: 18px;
+    font-size: 20px;
     padding: 6px 10px;
   }
 
@@ -261,21 +268,48 @@ body {
   }
 
   .message-container {
-    height: 400px;
+    height: 450px;
   }
 
   .message-left,
   .message-right {
     max-width: 80%;
-    font-size: 14px;
+    font-size: 15px;
   }
 
   .chat-image {
-    max-width: 120px;
+    max-width: 140px;
   }
 
   .send-button {
-    height: 40px;
+    height: 42px;
+    font-size: 14px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 400px) {
+  .name {
+    font-size: 16px;
+    padding: 5px 8px;
+  }
+
+  .message-container {
+    height: 380px;
+  }
+
+  .message-left,
+  .message-right {
     font-size: 13px;
+  }
+
+  .chat-image {
+    max-width: 100px;
+  }
+
+  .send-button {
+    height: 38px;
+    font-size: 12px;
+    padding: 0 8px;
   }
 }
