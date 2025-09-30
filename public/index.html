@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Enter Name</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Poppins", sans-serif;
+      /* background: linear-gradient(135deg, #6a11cb, #2575fc); */
+      color: #fff;
+    }
+
+    .box {
+       background: linear-gradient(135deg, #6a11cb, #2575fc);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      backdrop-filter: blur(10px);
+      width: 300px;
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    input {
+      width: 80%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      outline: none;
+      transition: 0.3s;
+      margin-bottom: 20px;
+    }
+
+    input:focus {
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+      transform: scale(1.03);
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #ff6a00;
+      color: #fff;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ff8800;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>Enter Your Name</h2>
+    <input type="text" id="username" placeholder="Your name">
+    <br>
+    <button onclick="joinChat()">Join Chat 🚀</button>
+  </div>
+
+  <script>
+    function joinChat() {
+      const name = document.getElementById('username').value.trim();
+      if (name) {
+        localStorage.setItem("chatName", name);
+        window.location.href = "chat.html";
+      } else {
+        alert("Please enter your name!");
+      }
+    }
+  </script>
+</body>
+</html>
