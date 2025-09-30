@@ -17,13 +17,19 @@
         <ul class="message-container" id="message-container">
            
         </ul>
-
-        <form id="message-form" class="message-form">
-            <input type="text" id="message-input" name="message" class="message-input" placeholder="Type a message..." autocomplete="off" maxlength="200">
-            <button type="submit" class="send-button">
-                Send <i class="fa fa-paper-plane"></i>
-            </button>
-        </form>
+       <form id="message-form" class="message-form">
+  <div class="input-wrapper">
+    <div id="preview-inside"></div>
+    <input type="text" id="message-input" name="message" class="message-input" placeholder="Type a message..." autocomplete="off" maxlength="200">
+    <input type="file" id="image-input" accept="image/*" hidden>
+    <label for="image-input" class="image-button">
+      <i class="fa fa-image"></i>
+    </label>
+  </div>
+  <button type="submit" class="send-button">
+    Send <i class="fa fa-paper-plane"></i>
+  </button>
+</form>
     </div>
     <h3 class="clients-total" id="clients-total">Total Clients: 2</h3>
     <script src="/socket.io/socket.io.js"></script>
